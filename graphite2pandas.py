@@ -10,7 +10,12 @@ Licence: WTFPL
 
 """
 
-def g2p(url):
+def _localize(index, tz):
+    index = index.tz_localize('UTC')
+    index = index.tz_convert('CET')
+    return index
+
+def g2p(url, localize='CET'):
     resp = requests.get(url)
     decoded_json = json.loads(resp.content)
     times, values, labels =  [], [], []
@@ -19,7 +24,10 @@ def g2p(url):
         datapoints = zip(*element['datapoints'])
         values.append(datapoints[0])
         times.append(datapoints[1])
+    index = pandas.DatetimeIndex((numpy.array(times[0],dtype='datetime64[s]')))
+    if localize:
+        index = _localize(localize)
     return pandas.DataFrame(
             dict(((labels[i], values[i]) for i in range(len(values)))),
-            index=(numpy.array(times[0],dtype='datetime64[s]')))
+            index=index)
 
