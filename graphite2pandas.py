@@ -3,7 +3,7 @@ import numpy
 import requests
 import json
 
-""" Script to convert graphite response to pandas object.
+""" Script to convert graphite response to Pandas DataFrame.
 
 Author: Valentin Haenel <valentin@haenel.co>
 Licence: WTFPL
