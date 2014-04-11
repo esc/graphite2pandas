@@ -4,6 +4,10 @@ import requests
 import json
 
 """ Script to convert graphite response to pandas object.
+
+Author: Valentin Haenel <valentin@haenel.co>
+Licence: WTFPL
+
 """
 
 def g2p(url):
