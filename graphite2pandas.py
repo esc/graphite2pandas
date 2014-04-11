@@ -8,6 +8,20 @@ import json
 Author: Valentin Haenel <valentin@haenel.co>
 Licence: WTFPL
 
+Example
+-------
+
+>>> from graphite2pandas import g2p
+>>> url = 'http://grp.example.com/render/?target=metric.data.foo&format=json&from=-31d'
+>>> df = g2p(url)
+>>> df.plot()
+
+Notes
+-----
+
+* You need to request data as JSON using `format=json`
+* You can specify a timezone using the `localize` parameter
+
 """
 
 def _localize(index, tz):
