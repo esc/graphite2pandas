@@ -1,7 +1,7 @@
 graphite2pandas
 ---------------
 
-Script to convert graphite response to Pandas DataFrame.
+Script to convert Graphite response to Pandas DataFrame.
 
 Author: Valentin Haenel <valentin@haenel.co>
 Licence: WTFPL
