@@ -3,6 +3,8 @@ import numpy
 import requests
 import json
 
+""" Script to convert graphite response to pandas object.
+"""
 
 def g2p(url):
     resp = requests.get(url)
