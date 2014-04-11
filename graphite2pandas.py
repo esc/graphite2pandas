@@ -48,7 +48,7 @@ def g2p(url, localize='CET'):
         times.append(datapoints[1])
     index = pandas.DatetimeIndex((numpy.array(times[0],dtype='datetime64[s]')))
     if localize:
-        index = _localize(localize)
+        index = _localize(index, localize)
     return pandas.DataFrame(
             dict(((labels[i], values[i]) for i in range(len(values)))),
             index=index)
