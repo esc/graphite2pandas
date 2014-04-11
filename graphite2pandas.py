@@ -13,7 +13,7 @@ to a `Pandas <http://pandas.pydata.org/>`_ DataFrame.
 
 Can be used to do fetch and load data for exploratory data analysis (EDA) and
 for prototyping advanced algorithms on your local machine before hacking on
-graphites `functions.py`.
+graphites ``functions.py``.
 
 
 Example
