@@ -13,9 +13,7 @@ Licence: WTFPL
 def g2p(url):
     resp = requests.get(url)
     decoded_json = json.loads(resp.content)
-    times =  []
-    values = []
-    labels = []
+    times, values, labels =  [], [], []
     for element in decoded_json:
         labels.append(element['target'])
         datapoints = zip(*element['datapoints'])
