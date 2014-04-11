@@ -3,14 +3,18 @@ import numpy
 import requests
 import json
 
-""" Script to convert Graphite response to Pandas DataFrame.
+"""
 
-Author: Valentin Haenel <valentin@haenel.co>
-Licence: WTFPL
+Script to convert `Graphite <http://graphite.readthedocs.org/en/latest/>`_ data
+to a `Pandas <http://pandas.pydata.org/>`_ DataFrame.
+
+:Author: Valentin Haenel <valentin@haenel.co>
+:Licence: `WTFPL <http://www.wtfpl.net/>`_
 
 Can be used to do fetch and load data for exploratory data analysis (EDA) and
 for prototyping advanced algorithms on your local machine before hacking on
-Graphite's `functions.py`.
+graphites `functions.py`.
+
 
 Example
 -------
